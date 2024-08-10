@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.dmitryweiner.braintrain.databinding.FragmentNotificationsBinding
 import com.dmitryweiner.braintrain.databinding.FragmentRememberNumbersBinding
-import com.dmitryweiner.braintrain.ui.notifications.NotificationsViewModel
 
 class RememberNumberFragment : Fragment() {
     private var _binding: FragmentRememberNumbersBinding? = null
