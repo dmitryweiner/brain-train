@@ -11,12 +11,27 @@ public enum class State(val stateId: Int) {
 }
 
 class RememberNumberViewModel : ViewModel() {
-    private var _number = MutableLiveData<Int>()
-    var number: LiveData<Int> = _number
-    private var state = State.SHOW_NUMBER
-    init {
-        // TODO: calc length depending on user's success
-        _number.value = generateNumber(5)
+    var number = MutableLiveData(generateNumber(5))
+    var state = MutableLiveData(State.SHOW_NUMBER)
+    var result = MutableLiveData<Boolean>(true)
+    var results = MutableLiveData(mutableListOf<Boolean>())
+    private var answer: Int = 0
+
+    fun setState(newState: State) {
+        state.value = newState
+        when(state.value) {
+            State.SHOW_NUMBER -> number.value = generateNumber(5)
+            State.SHOW_RESULT -> {
+                val innerResult = number.value == answer // TODO: result could be a score
+                result.value = innerResult
+                results.value?.add(innerResult)
+            }
+            else -> {}
+        }
+    }
+
+    fun setAnswer(newAnswer: Int) {
+        answer = newAnswer
     }
 }
 

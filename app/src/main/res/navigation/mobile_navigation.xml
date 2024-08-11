@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_remember_numbers"
-        android:name="com.dmitryweiner.braintrain.ui.rememberNumber.RememberNumberFragment"
+        android:name="com.dmitryweiner.braintrain.ui.rememberNumber.RememberNumberFragmentMain"
         android:label="@string/title_remember_numbers"
-        tools:layout="@layout/fragment_remember_numbers" />
+        tools:layout="@layout/fragment_remember_number_main" />
 </navigation>
