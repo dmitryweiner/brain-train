@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.buttonReaction.setOnClickListener {
-            // not implemented yet
+            findNavController().navigate(R.id.navigation_check_reaction)
         }
         return root
     }

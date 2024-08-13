@@ -16,4 +16,10 @@
         android:name="com.dmitryweiner.braintrain.ui.rememberNumber.RememberNumberFragmentMain"
         android:label="@string/title_remember_numbers"
         tools:layout="@layout/fragment_remember_number_main" />
+
+    <fragment
+        android:id="@+id/navigation_check_reaction"
+        android:name="com.dmitryweiner.braintrain.ui.checkReaction.CheckReactionFragmentMain"
+        android:label="@string/check_reaction"
+        tools:layout="@layout/fragment_check_reaction_main" />
 </navigation>

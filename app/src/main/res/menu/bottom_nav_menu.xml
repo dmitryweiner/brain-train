@@ -11,4 +11,9 @@
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_remember_numbers" />
 
+    <item
+        android:id="@+id/navigation_check_reaction"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/check_reaction" />
+
 </menu>
