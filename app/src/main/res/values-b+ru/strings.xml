@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BrainTrain</string>
+    <string name="title_home">Домой</string>
+    <string name="title_remember_numbers">Запоминание чисел</string>
+    <string name="check_reaction">Проверка реакции</string>
+    <string name="check_reaction_1_instruction">Сейчас покажут красную кнопку, как только она станет зелёной, нужно будет на неё как можно скорее нажать</string>
+    <string name="check_reaction_1_response">Хорошо</string>
+    <string name="check_reaction_2_press_me">НАЖМИ МЕНЯ</string>
+    <string name="check_reaction_3_reaction_speed">Скорость реакции</string>
+    <string name="check_reaction_3_more">Ещё!</string>
+    <string name="home_list_of_games">Список игр</string>
+    <string name="home_remember_number">Запоминание чисел</string>
+    <string name="home_check_reaction">Проверка реакции</string>
+    <string name="remember_number_instruction">Запомните это число</string>
+    <string name="remember_number_enter_the_number">Введите число</string>
+    <string name="remember_number_ok">OK</string>
+    <string name="remember_number_your_answer_is">Ваш ответ</string>
+    <string name="remember_number_your_answer_is_correct">правильный</string>
+    <string name="remember_number_your_answer_is_incorrect">неправильный</string>
+    <string name="remember_number_one_more_time">Ещё раз?</string>
+</resources>

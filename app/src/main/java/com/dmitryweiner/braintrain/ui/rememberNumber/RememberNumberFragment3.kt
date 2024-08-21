@@ -29,7 +29,9 @@ class RememberNumberFragment3 : Fragment() {
         val root: View = binding.root
 
         rememberNumberViewModel.result.observe(viewLifecycleOwner) {
-            binding.textResult.text = if (it) "Correct" else "Not correct"
+            binding.textResult.text =
+                if (it) getString(R.string.remember_number_your_answer_is_correct)
+                else getString(R.string.remember_number_your_answer_is_incorrect)
         }
 
         binding.buttonMore.setOnClickListener {

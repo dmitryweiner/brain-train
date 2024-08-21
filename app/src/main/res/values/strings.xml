@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">BrainTrain</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="title_remember_numbers">Remember numbers</string>
     <string name="check_reaction">Check reaction</string>
+    <string name="check_reaction_1_instruction">A red button will be shown now, as soon as it turns green, you will need to press it as fast as possible</string>
+    <string name="check_reaction_1_response">Looks good</string>
+    <string name="check_reaction_2_press_me">PRESS ME</string>
+    <string name="check_reaction_3_reaction_speed">Reaction speed</string>
+    <string name="check_reaction_3_more">One more time!</string>
+    <string name="home_list_of_games">List of games</string>
+    <string name="home_remember_number">Remember number</string>
+    <string name="home_check_reaction">Check reaction</string>
+    <string name="remember_number_instruction">Remember this number</string>
+    <string name="remember_number_enter_the_number">Enter the number</string>
+    <string name="remember_number_ok">OK</string>
+    <string name="remember_number_your_answer_is">Your answer is</string>
+    <string name="remember_number_your_answer_is_correct">correct</string>
+    <string name="remember_number_your_answer_is_incorrect">not correct</string>
+    <string name="remember_number_one_more_time">One more time?</string>
 </resources>

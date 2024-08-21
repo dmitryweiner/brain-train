@@ -15,14 +15,14 @@
         android:textSize="34sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="16dp"
-        android:text="List of games:" />
+        android:text="@string/home_list_of_games" />
 
     <Button
         android:id="@+id/buttonRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="Remember number"
+        android:text="@string/home_remember_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="Check reaction"
+        android:text="@string/home_check_reaction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
