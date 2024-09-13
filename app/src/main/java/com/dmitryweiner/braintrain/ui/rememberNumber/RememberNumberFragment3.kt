@@ -35,7 +35,7 @@ class RememberNumberFragment3 : Fragment() {
         }
 
         binding.buttonMore.setOnClickListener {
-            rememberNumberViewModel.setState(State.SHOW_NUMBER)
+            rememberNumberViewModel.nextState()
         }
 
         return root

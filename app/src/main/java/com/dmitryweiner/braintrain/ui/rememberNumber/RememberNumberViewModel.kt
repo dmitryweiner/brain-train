@@ -4,34 +4,38 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-public enum class State(val stateId: Int) {
-    SHOW_NUMBER(1),
-    GUESS_NUMBER(2),
-    SHOW_RESULT(3)
-}
-
 class RememberNumberViewModel : ViewModel() {
+    enum class State(val stateId: Int) {
+        SHOW_NUMBER(1),
+        GUESS_NUMBER(2),
+        SHOW_RESULT(3)
+    }
+
     var number = MutableLiveData(generateNumber(5))
     var state = MutableLiveData(State.SHOW_NUMBER)
     var result = MutableLiveData<Boolean>(true)
     var results = MutableLiveData(mutableListOf<Boolean>())
-    private var answer: Int = 0
 
-    fun setState(newState: State) {
-        state.value = newState
+    fun nextState(answer: Int? = null) {
         when(state.value) {
-            State.SHOW_NUMBER -> number.value = generateNumber(5)
-            State.SHOW_RESULT -> {
+            State.SHOW_NUMBER -> {
+                state.value = State.GUESS_NUMBER
+            }
+            State.GUESS_NUMBER -> {
+                if (answer == null) {
+                    return
+                }
                 val innerResult = number.value == answer // TODO: result could be a score
                 result.value = innerResult
                 results.value?.add(innerResult)
+                state.value = State.SHOW_RESULT
+            }
+            State.SHOW_RESULT -> {
+                state.value = State.SHOW_NUMBER
+                number.value = generateNumber(5)
             }
             else -> {}
         }
-    }
-
-    fun setAnswer(newAnswer: Int) {
-        answer = newAnswer
     }
 }
 

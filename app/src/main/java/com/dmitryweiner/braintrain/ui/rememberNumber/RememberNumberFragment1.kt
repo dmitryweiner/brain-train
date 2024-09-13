@@ -44,7 +44,7 @@ class RememberNumberFragment1 : Fragment() {
         val rememberNumberViewModel by viewModels<RememberNumberViewModel> ({ requireParentFragment() })
         lifecycleScope.launch {
             delay(5000) // TODO: add here counter for user
-            rememberNumberViewModel.setState(State.GUESS_NUMBER)
+            rememberNumberViewModel.nextState()
         }
     }
 

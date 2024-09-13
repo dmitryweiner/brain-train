@@ -37,8 +37,7 @@ class RememberNumberFragment2 : Fragment() {
             } catch (e: NumberFormatException) {
                 //
             }
-            rememberNumberViewModel.setAnswer(parsedInt)
-            rememberNumberViewModel.setState(State.SHOW_RESULT)
+            rememberNumberViewModel.nextState(parsedInt)
         }
 
         return root

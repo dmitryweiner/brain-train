@@ -33,9 +33,9 @@ class RememberNumberFragmentMain : Fragment() {
         val frame: FrameLayout = binding.frame
         rememberNumberViewModel.state.observe(viewLifecycleOwner) {
             when(it) {
-                State.SHOW_NUMBER -> setFragment(RememberNumberFragment1())
-                State.GUESS_NUMBER -> setFragment(RememberNumberFragment2())
-                State.SHOW_RESULT -> setFragment(RememberNumberFragment3())
+                RememberNumberViewModel.State.SHOW_NUMBER -> setFragment(RememberNumberFragment1())
+                RememberNumberViewModel.State.GUESS_NUMBER -> setFragment(RememberNumberFragment2())
+                RememberNumberViewModel.State.SHOW_RESULT -> setFragment(RememberNumberFragment3())
                 else -> { /* no op */}
             }
         }
