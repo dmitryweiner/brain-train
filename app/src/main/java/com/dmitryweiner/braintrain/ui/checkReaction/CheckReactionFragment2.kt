@@ -40,8 +40,7 @@ class CheckReactionFragment2 : Fragment() {
 
             // save to model
             val dashboardViewModel by viewModels<CheckReactionViewModel> ({ requireParentFragment() })
-            dashboardViewModel.setStatus(3)
-            dashboardViewModel.setResult(1.0 * passedTime / 1000)
+            dashboardViewModel.nextState(1.0 * passedTime / 1000)
             isRunning = false
         }
 

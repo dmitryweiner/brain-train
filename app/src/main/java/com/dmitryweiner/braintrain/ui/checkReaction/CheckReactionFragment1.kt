@@ -20,15 +20,10 @@ class CheckReactionFragment1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val dashboardViewModel by viewModels<CheckReactionViewModel> ({ requireParentFragment() })
         val button = view.findViewById<Button>(R.id.buttonStart)
         button?.setOnClickListener {
-            setModelStatus(2)
+            dashboardViewModel.nextState()
         }
     }
-
-    private fun setModelStatus(status: Int) {
-        val dashboardViewModel by viewModels<CheckReactionViewModel> ({ requireParentFragment() })
-        dashboardViewModel.setStatus(status)
-    }
-
 }

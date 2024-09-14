@@ -25,14 +25,14 @@ class CheckReactionFragmentMain : Fragment() {
         _binding = FragmentCheckReactionMainBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        dashboardViewModel.status.observe(viewLifecycleOwner) {
-            if (it == 1) {
+        dashboardViewModel.state.observe(viewLifecycleOwner) {
+            if (it == CheckReactionViewModel.State.SHOW_INSTRUCTION) {
                 setFragment(CheckReactionFragment1())
             }
-            if (it == 2) {
+            if (it == CheckReactionViewModel.State.SHOW_BUTTON) {
                 setFragment(CheckReactionFragment2())
             }
-            if (it == 3) {
+            if (it == CheckReactionViewModel.State.SHOW_RESULT) {
                 setFragment(CheckReactionFragment3())
             }
         }

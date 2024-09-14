@@ -1,6 +1,5 @@
 package com.dmitryweiner.braintrain.ui.rememberNumber
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
@@ -12,10 +11,10 @@ class RememberNumberViewModel : ViewModel() {
     }
 
     var number = MutableLiveData(generateNumber(5))
-    var state = MutableLiveData(State.SHOW_NUMBER)
     var result = MutableLiveData<Boolean>(true)
     var results = MutableLiveData(mutableListOf<Boolean>())
 
+    var state = MutableLiveData(State.SHOW_NUMBER)
     fun nextState(answer: Int? = null) {
         when(state.value) {
             State.SHOW_NUMBER -> {

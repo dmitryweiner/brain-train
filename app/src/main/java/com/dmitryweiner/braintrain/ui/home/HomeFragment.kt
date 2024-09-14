@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.dmitryweiner.braintrain.R
@@ -26,13 +27,16 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val navOptions = NavOptions.Builder()
+            .setPopUpTo(R.id.navigation_home, true)
+            .build()
 
         binding.buttonRemember.setOnClickListener {
-            findNavController().navigate(R.id.navigation_remember_numbers)
+            findNavController().navigate(R.id.navigation_remember_numbers, null, navOptions)
         }
 
         binding.buttonReaction.setOnClickListener {
-            findNavController().navigate(R.id.navigation_check_reaction)
+            findNavController().navigate(R.id.navigation_check_reaction, null, navOptions)
         }
         return root
     }

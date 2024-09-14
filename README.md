@@ -10,4 +10,4 @@ User should remember six digit number and then enter it correctly.
 
 User should press button very fast when it changes its' color.
 
-[Download APK](app-debug.apk)
+[Download APK](https://github.com/dmitryweiner/brain-train/raw/master/app-debug.apk)

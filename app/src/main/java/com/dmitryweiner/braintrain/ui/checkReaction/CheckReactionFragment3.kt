@@ -13,10 +13,6 @@ import com.dmitryweiner.braintrain.R
 
 class CheckReactionFragment3 : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,7 +31,7 @@ class CheckReactionFragment3 : Fragment() {
 
         val buttonMore = view.findViewById<Button>(R.id.buttonMore)
         buttonMore.setOnClickListener {
-            dashboardViewModel.setStatus(1)
+            dashboardViewModel.nextState()
         }
     }
 
